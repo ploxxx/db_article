@@ -1,9 +1,4 @@
 <?php
-
-    $db_host = "localhost" ;
-    $db_user = "root" ;
-    $db_pass = "" ;
-    $db_name = "article_db" ;
     class Database{
 
         private $db_host = 'localhost';
@@ -19,10 +14,14 @@
             }
         }
         public function getInformation(){
-            $link = $this->con->query("SELECT Name,Text FROM article");
-            $row = $link->fetch_assoc();
-            $this->con->close();
-            return $row;
+            $link = $this->con->query("SELECT * FROM article");
+            $arr = [] ;
+            $i = 0 ;
+            while($row = $link->fetch_assoc()){
+                $arr[$i] = $row ;
+                $i++ ;
+            }
+            return $arr ;
         }
     
     }    

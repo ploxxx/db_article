@@ -2,7 +2,7 @@
     include("db_connect.php");
     $db = new Database ;
     $db->connect();
-    print_r($db->getInformation()) ;
+    print_r($db->getInformation());
     /*$link = mysqli_connect('localhost','root','');
     if(!mysqli_select_db($link,'article_db')) 
         die(mysqli_error());
