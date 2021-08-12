@@ -2,14 +2,14 @@
     include("db_connect.php");
     $db = new Database ;
     $db->connect();
-    print_r($db->getInformation());
-    /*$link = mysqli_connect('localhost','root','');
-    if(!mysqli_select_db($link,'article_db')) 
-        die(mysqli_error());
-    $res = mysqli_query($link,"SELECT Name,Text FROM article");
-    $row = mysqli_fetch_array($res);
-    echo $row['Text']; */
+    $arr1 = [] ;
+    $arr1 = $db->getInformation();
 
+    for($i = 0 ; $i < count($arr1) ; $i++){
+        echo 'Name NEWS : '.$arr1[$i]['Name'].'<br>'.'Text NEWS : '.$arr1[$i]['Text'].'<br>'; 
+    }
+    //var_dump($obj);
+    //print_r($arr1);
 ?>
 
 <!DOCTYPE html>
@@ -20,8 +20,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
     <title>Document</title>
+    <script type="text/javascript">
+        function pars(){
+            let url = <?php echo json_encode($arr1) ?>;
+		    let res = JSON.parse(url);
+            document.h1.innerHTML() = res. ;
+        }
+    </script>
 </head>
-<body>
-    <h1>hello,world!!!</h1>
+<body onload="pars()" >
+    <h1></h1>
 </body>
 </html>
