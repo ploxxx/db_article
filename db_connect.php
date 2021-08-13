@@ -24,11 +24,6 @@
             }
             return $arr ;
         }
-        public function getId(){
-            $link = $this->con->query("SELECT * FROM article WHERE Id='$page'");
-            $row = $link->fetch_assoc();
-            return $row ;
-        }
     
     }    
  
