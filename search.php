@@ -1,13 +1,12 @@
 <?php
       include("db_connect.php");
     
-
+      echo "<link rel='stylesheet' href='style/style.css'>";
       function search($query){
         $db = new Database ;
         $ser = $db->connect() ;
+        $text = "";
         $query = trim($query); 
-      //  $query = mysql_real_escape_string($query);
-        $query = htmlspecialchars($query); 
         if(!empty($query)){
             if(strlen($query) < 3){
                 $text = '<p>The request is too short</p>';
@@ -18,17 +17,17 @@
             else{
                 $q =   "SELECT * FROM article WHERE Name LIKE '%$query%' OR
                         Subject LIKE '%$query%' OR Text LIKE '%$query%'";
-                $result = mysqli_query($ser,$q);
+                $result = mysqli_query($ser,$q);  
+                $text = "<ul class='border'>";
                 while ($row = mysqli_fetch_assoc($result)){
-                    $text = '<br> Name NEWS : '.$row['Name'].'<br> Subject NEWS : '.$row['Subject'].'<br>'.'Text NEWS : '.$row['Text']; 
-
+                    $text .= '<li><br> Name NEWS :<a href=page.php?id='.$row['Id'].'>'.$row['Name'].'</a><br>'.'Text NEWS : '.$row['Subject'].'<br></li>'; 
                 }
             }
         }
         else{
-            $text = '<p>Задан пустой поисковый запрос.</p>';
+            $text = "<p>Задан пустой поисковый запрос.</p>";
         }
-        return $text ;
+        return $text."</ul>";
     }
     if (!empty($_POST['query'])) { 
         $search_result = search ($_POST['query']); 
