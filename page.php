@@ -16,6 +16,9 @@
     <title>Page</title>
 </head>
 <body>
-    <h1><?php echo '<br> Name NEWS : '.$res['Name'].'<br> Subject NEWS : '.$res['Subject'].'<br>'.'Text NEWS : '.$res['Text']; ?><h1>
+    <button type='button' style='font-size : 20px'><a href='index.php'>Back</a></button>
+    <h1><?php echo 'Name NEWS : '.$res['Name']?><h1>
+    <h2><?php echo 'Subject NEWS : '.$res['Subject']?><h2> 
+    <h3><?php echo 'Text NEWS : '.$res['Text']?><h3>
 </body>
 </html>

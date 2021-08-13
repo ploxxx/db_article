@@ -29,7 +29,7 @@
         }
         return $text."</ul>";
     }
-    echo "<button type='button'><a href='index.php'>Back</a></button>";
+    echo "<button type='button' style='font-size : 20px'><a href='index.php'>Back</a></button>";
     if (!empty($_POST['query'])) { 
         $search_result = search ($_POST['query']); 
         echo $search_result; 
