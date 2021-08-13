@@ -1,5 +1,5 @@
 <?php
-    include("db_connect.php");
+    include("connDB/db_connect.php");
     $db = new Database ;
     $ser = $db->connect() ;
     $page = $_GET['id'];

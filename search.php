@@ -1,5 +1,5 @@
 <?php
-      include("db_connect.php");
+      include("connDB/db_connect.php");
     
       echo "<link rel='stylesheet' href='style/style.css'>";
       function search($query){
@@ -23,9 +23,6 @@
                     $text .= '<li><br> Name NEWS :<a href=page.php?id='.$row['Id'].'>'.$row['Name'].'</a><br>'.'Text NEWS : '.$row['Subject'].'<br></li>'; 
                 }
             }
-        }
-        else{
-            $text = "<p>Clear.</p>";
         }
         return $text."</ul>";
     }

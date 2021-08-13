@@ -1,15 +1,9 @@
 <?php
-    include("db_connect.php");
+    include("connDB/db_connect.php");
     $db = new Database ;
     $db->connect();
     $arr1 = [] ;
     $arr1 = $db->getInformation();
-
-  /* for($i = 0 ; $i < count($arr1) ; $i++){
-        echo '<br> Name NEWS : '.$arr1[$i]['Name'].'____'.'Text NEWS : '.$arr1[$i]['Text'].'<br>'; 
-    }*/
-    //var_dump($obj);
-    //print_r($arr1);
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +19,7 @@
 </head>
 <body>
     <form name="search" method="post" action="search.php">
-        <input type="search" name="query" placeholder="Поиск">
+        <input type="search" name="query" placeholder="Поиск" required>
         <button type="submit">Найти</button> 
     </form>
     <ul class="border">
