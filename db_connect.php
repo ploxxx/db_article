@@ -14,7 +14,7 @@
             }
         }
         public function getInformation(){
-            $link = $this->con->query("SELECT Name,Text FROM article");
+            $link = $this->con->query("SELECT * FROM article");
             $arr = [] ;
             $i = 0 ;
             while($row = $link->fetch_assoc()){

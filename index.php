@@ -21,14 +21,9 @@
     <link rel="stylesheet" href="style/style.css">
     <title>Document</title>
     <script type="text/javascript">
-        function pars(){
-            let url = <?php echo json_encode($arr1) ?>;
-		    let res = JSON.parse(url);
-            document.h1.innerHTML() = res. ;
-        }
     </script>
 </head>
-<body onload="pars()" >
+<body>
     <h1></h1>
 </body>
 </html>
