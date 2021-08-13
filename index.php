@@ -30,7 +30,7 @@
     </form>
     <ul class="border">
         <?php for($i = 0 ; $i < count($arr1) ; $i++){ ?>
-        <li><?php  echo '<br> Name NEWS :<a href=page.php?id='.$arr1[$i]['Id'].'>'.$arr1[$i]['Name'].'</a><br>'.'Text NEWS : '.$arr1[$i]['Subject'].'<br>';?> </li>
+        <li><?php  echo '<br> Name NEWS :<a href=page.php?id='.$arr1[$i]['Id'].'>'.$arr1[$i]['Name'].'</a><br>'.'Subject NEWS : '.$arr1[$i]['Subject'].'<br>';?> </li>
         <?php } ?>
     </ul>
 </body>

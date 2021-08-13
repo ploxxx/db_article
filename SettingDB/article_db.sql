@@ -41,7 +41,7 @@ CREATE TABLE `article` (
 INSERT INTO `article` (`Id`, `Name`, `Subject`, `Text`) VALUES
 (1, 'Red', 'Color', 'The adjective \" red \" in the color meaning of the Slavic languages is peculiar only to Russian. In the original meaning, it occurs only in phraseological phrases such as: \"the debt is red with payment\", \"for the sake of a red word\", \"red price\", \"red fish\", \"red girl\", \"for peace and death is red\"'),
 (2, 'Blue', 'Color', 'The name of the color group. The spectral blue color is felt by a person under the influence of electromagnetic radiation with wavelengths in the range of 440-485 nm. One of the main colors in the KZS system.'),
-(3, 'Green', 'Colors', 'One of the three primary colors, along with red and blue, green is considered the color of visible electromagnetic radiation (light) with wavelengths lying in the range of approximately 510-550 nm[1]'),
+(3, 'Green', 'Colors', 'One of the three primary colors, along with , green is considered the color of visible electromagnetic radiation (light) with wavelengths lying in the range of approximately 510-550 nm[1]'),
 (4, 'BMW', 'Cars', 'In Russian, the name \"BMW\" is pronounced \"be-em-ve\", which is close to the German pronunciation; occasionally there is a spelling \"BMW\".'),
 (5, 'Honda', 'Cars', 'Honda was the first Japanese car manufacturer to release a special luxury brand — Acura in 1986. In addition to the main automobile and motorcycle business, Honda also produces garden equipment, boat engines, jet skis and generators, as well as other products'),
 (6, 'Ferrari', 'Cars', 'The racing team, called\" Scuderia Ferrari \" (Scuderia Ferrari) was founded by Enzo Ferrari in 1929. It began to produce vehicles only in 1947[1].');

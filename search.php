@@ -25,10 +25,11 @@
             }
         }
         else{
-            $text = "<p>Задан пустой поисковый запрос.</p>";
+            $text = "<p>Clear.</p>";
         }
         return $text."</ul>";
     }
+    echo "<button type='button'><a href='index.php'>Back</a></button>";
     if (!empty($_POST['query'])) { 
         $search_result = search ($_POST['query']); 
         echo $search_result; 
